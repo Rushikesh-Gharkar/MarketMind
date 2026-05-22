@@ -1,0 +1,16 @@
+backend/
+│
+├── prisma/
+├── src/
+│   ├── controllers/
+│   ├── routes/
+│   ├── middleware/
+│   ├── services/
+│   ├── websocket/
+│   ├── utils/
+│   ├── config/
+│   └── app.js
+│
+├── server.js
+├── .env
+└── package.json
