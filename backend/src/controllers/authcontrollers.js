@@ -15,7 +15,7 @@ exports.signup = async (req , res)=>{
             })
         }
 
-        const existing_user = await prisma.user.findOne({
+        const existing_user = await prisma.user.findUnique({
             where : {email}
         })
 
@@ -60,7 +60,7 @@ exports.login = async (req , res)=>{
     try{
         const {email , password} = req.body;
 
-        const user = await prisma.user.findOne({
+        const user = await prisma.user.findUnique({
             where : {email : email}
         })
 
